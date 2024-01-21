@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+<h1>Error</h1>
+<p th:if="${characterName != null}">
+    Character with name '<span th:text="${characterName}"></span>' not found.
+</p>
+<p th:unless="${characterName != null}">
+    An unexpected error occurred.
+</p>
+</body>
+</html>
